@@ -1,6 +1,7 @@
 package com.example.lab2;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
 	public static void main(String[] args) {
@@ -18,16 +19,22 @@ public class Main {
 		al.add(new Student(107, "Ahn", 27));
 		al.add(new Student(108, "Kwon", 24));
 		al.add(new Student(109, "Yoon", 28));
-		al.add(new Student(110, "Jung", 23));
+		al.add(new Student(110, "Jung", 26));
+		
+		System.out.println("Student List (ordered by name)");
+		Collections.sort(al);
 		
 		//Traverse elements of arraylist (method #1)
 		for (Student s : al) {
 			System.out.println(s.toString());
 		}
 		
-		//Remove an object from arraylist
-		al.remove(s2);
-		System.out.println("One student removed!");
+		System.out.println("Student List (reverse ordered by name)");
+		Collections.sort(al, Collections.reverseOrder());
+		
+//		//Remove an object from arraylist
+//		al.remove(s2);
+//		System.out.println("One student removed!");
 		
 		//Traverse elements of arraylist (method #2)
 		for (int i=0; i<al.size(); i++) {

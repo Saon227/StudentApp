@@ -1,9 +1,14 @@
 package com.example.lab2;
 
-public class Student {
+public class Student implements Comparable<Student> {
 	int no;	//number
 	String name; //name
 	int age; //age
+	
+	@Override
+	public int compareTo(Student o) {
+		return name.compareTo(o.name);
+	}
 	
 	public Student(int no, String name, int age) {
 		super();
